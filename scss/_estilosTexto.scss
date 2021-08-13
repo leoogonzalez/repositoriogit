@@ -1,0 +1,86 @@
+
+
+$texto:'Castoro', serif;
+$letra: oblique;
+
+
+@mixin primerTexto($letra,$texto) {
+    color:black;
+    font-style: $letra;
+    font-size: 3px * 6;
+    font-family: $texto;
+    font-weight: normal;
+    text-align: center;
+}
+
+@each $var in list {
+    
+}
+h2{
+    color:black;
+    font-style: italic;
+    font-size: 15px + 10;
+    font-family: $texto;
+    font-weight: normal;
+    text-align: center;
+    text-transform:capitalize;
+    line-height: 1.4;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+h3, h4{
+    color:#FFF7DD;
+    font-style: italic;
+
+    font-family: $texto;
+    font-weight: normal;
+    text-align: center;
+    text-transform:capitalize;
+    line-height: 1.4;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+.texto{
+  @include primerTexto($letra,$texto);
+}
+
+
+.aside__texto{
+    @include primerTexto($letra,$texto);
+}
+
+.catedrasTexto{
+    color:black;
+    font-style: oblique;
+    font-size: 3px * 5;
+    font-family: $texto;
+    font-weight: normal;
+    text-align: center;
+}
+
+.textoServicios{
+    color:black;
+    font-style: italic;
+    font-size: 10px + 10;
+    font-family: $texto;
+    font-weight: normal;
+    text-align: center;
+    text-transform:initial;
+    padding-top: 10px;
+    width: 50px * 2;
+    height: 500px * 2;
+
+    /* background-color: black; */
+    animation-name: animacion1;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+
+.textoContacto{
+    margin-left: 50px;
+}

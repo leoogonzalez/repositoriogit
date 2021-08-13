@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+
+.gridBodyIndex{
+    display: grid;
+    grid-template-areas: 
+    "encabezado encabezado encabezado"
+    "principal principal publicidad"
+    "principal principal publicidad"
+    "pieDePagina pieDePagina pieDePagina"
+    ;
+}
+
+.gridBodyIndex__headerIndex{
+    grid-area: encabezado;
+    height: 10vh;
+    }
+
+.gridBodyIndex__mainIndex{
+    grid-area: principal;
+    background-color:white;
+    height: 70vh;
+    display: flex;     
+    flex-direction: column; 
+    justify-content: space-evenly;
+}
+
+.gridBodyIndex__asideIndex{
+    grid-area: publicidad;
+    background-color:white;
+    width: 30vw;
+    height: 70vh;
+    display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.gridBodyIndex__footerIndex{
+    grid-area: pieDePagina;
+    background-color: #3D4C6C;
+    height: 20vh;
+    text-align: center;
+    background-image: linear-gradient(white, #3d495f );
+    padding-top: 10px + 10;
+
+}
+
+
+@import "scss/headerIndex";
+@import "scss/mainIndex";
+@import "scss/asideIndex";
+@import "scss/footerIndex";
+@import "scss/estilosTexto";
+
+
+
+
+@media (min-width: 351px) and (max-width:516px) {
+    
+    .gridBodyIndex {
+    grid-template-areas: 
+    "encabezado encabezado encabezado"
+    "principal principal "
+    "principal principal "
+    "publicidad publicidad"
+    "pieDePagina pieDePagina pieDePagina" ;
+grid-template-columns: 100%;
+}
+
+.hijoMainImagen{
+width: 0;
+height: 0;
+}
+
+.mainIndex{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
+.gridBodyContacto{
+display: grid;
+grid-template-areas: 
+"encabezado encabezado encabezado"
+"principal principal publicidad"
+"principal principal publicidad"
+"pieDePagina pieDePagina pieDePagina";}
+}
+
+
+@media (min-width: 517px) and (max-width:980px) {
+   
+    .gridBodyIndex{
+        grid-template-areas: 
+        "encabezado encabezado encabezado"
+        "principal principal "
+        "principal principal "
+        "publicidad publicidad"
+        "pieDePagina pieDePagina pieDePagina";
+    }
+
+    .hijoMainImagen{
+        display: flex;
+  flex-direction: row;
+  justify-content: center;
+    }
+
+    .mainIndex .hijoMainImagen{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+height: 100PX;
+    }
+
+    .gridBodyContacto{
+        display: grid;
+        grid-template-areas: 
+        "encabezado encabezado encabezado"
+        "principal principal publicidad"
+        "principal principal publicidad"
+        "pieDePagina pieDePagina pieDePagina";
+    }
+}
+
+@media (min-width: 980px) and (max-width:1200px) {
+   
+    .gridBodyIndex{
+        grid-template-areas: 
+        "encabezado encabezado encabezado"
+        "principal principal "
+        "principal principal "
+        "publicidad publicidad"
+        "pieDePagina pieDePagina pieDePagina";
+    }
+.gridBodyIndex__mainIndex{
+    width: 50vw;
+}
+.gridBodyIndex__asideIndex{
+    width: 50vw;
+}
+    .hijoMainImagen{
+        width: 300px;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+
+  
+
+}
